@@ -1,0 +1,1 @@
+// needs to get a message from the popup script about which sites to block
