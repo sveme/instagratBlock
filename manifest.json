@@ -3,7 +3,7 @@
   "name": "InstagratBlock",
   "version": "0.0",
 
-  "description": "Allows you to block any instant gratification website that keeps you from doing what you want to do for a certain amount of time",
+  "description": "Allows you to block any instant gratification website that keeps you from doing what you want to do for a chosen amount of time",
 
   "icons": {
     "48": "icons/instagratBlock-48.png",
