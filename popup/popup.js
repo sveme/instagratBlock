@@ -1,27 +1,26 @@
-class BlockedSite {
-	constructor(url, hours, minutes, now){
-		this.url = url;
-		this.hours = hours;
-		this.minutes = minutes;
-		this.now = now;
-	}
-}
-
 function blockSite(e){
 	console.log("works");
-	var hours = document.getElementById("hour").value;
-	var minutes = document.getElementById("minutes").value;
-	var timeNow = new Date();
+	let hours = document.getElementById("hour").value;
+	let minutes = document.getElementById("minutes").value;
+	let blockUntil = new Date();
+	if (hours > 0){
+		blockUntil.setHours(hours);
+	}
+	if (minutes > 0){
+		blockUntil.setMinutes(minutes);
+	}
+
 	console.log(hours);
 	console.log(minutes);
-	console.log(timeNow);
+	console.log(blockUntil);
+
 	chrome.tabs.getCurrent(
 		function(tab){
-			var url = tab.url;
+			let url = tab.url; // TODO allow url matching patterns
 	})
 	console.log(url);
-	var blockedSite = new BlockedSite(url, hours, minutes, timeNow);
-
+	let blockedSite = {"url": url, "blockUntil":blockUntil};
+	chrome.runtime.sendMessage(blockedSite);
 	window.close();
 }
 
