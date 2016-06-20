@@ -20,29 +20,16 @@
   "browser_action": {
     "default_icon": "icons/instagratBlock-32.png",
     "default_title": "InstagratBlock",
-    "default_popup": "popup/instagratBlock.html",
-    "browser_style": true
-  },
+    "default_popup": "popup/instagratBlock.html"
+    },
 
   "permissions": [
     "activeTab",
-    "webrequest",
-    "webrequestBlocking"
+    "webRequest",
+    "webRequestBlocking"
     ],
 
-  "web_accessible_ressources": [
-    "icons/blockPopup.png"
-  ],
-
   "background":{
-    "scripts": "background/background.js"
-  },
-
-  "content_scripts": [
-    {
-      "matches": ["*://*.*/*"],
-      "js": ["content_scripts/instagratBlock.js"]
-    }
-  ]
-
+    "scripts": ["background/background.js"]
+  }
 }

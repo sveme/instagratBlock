@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="instagratBlock.css"/>
+    <!-- <link rel="stylesheet" href="instagratBlock.css"/> -->
   </head>
 
   <body>
@@ -11,8 +11,6 @@
       Block this Instant Gratification site for the selected time - if you really need it, however, restart the browser to relieve the block.
 
       <div id="blockTime">
-        <input type="time" id="hour" autofocus="True" list="hourList" placeholder="HH"> </input>
-        <input type="time" id="minute" list="minuteList" placeholder="MM"> </input>
         <datalist id="hourList">
           <option value="0">
           <option value="1">
@@ -25,11 +23,17 @@
           <option value="8">
         </datalist>
         <datalist id="minuteList">
-          <option value="00">
+          <option value="0">
           <option value="15">
           <option value="30">
           <option value="45">
         </datalist>
+        <label> hours
+          <input type="range" id="hour" autofocus="True" list="hourList" placeholder="HH" max=12 value=0> </input>
+        </label>
+        <label> minutes
+          <input type="range" id="minute" list="minuteList" placeholder="MM" max=50 step=10 value=0> </input>
+        </label>
       </div>
 
       <button type="button" id="block" class="igButton"> Block for selected time </button>
