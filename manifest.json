@@ -20,7 +20,8 @@
   "browser_action": {
     "default_icon": "icons/instagratBlock-32.png",
     "default_title": "InstagratBlock",
-    "default_popup": "popup/instagratBlock.html"
+    "default_popup": "popup/instagratBlock.html",
+    "browser_style": true
     },
 
   "permissions": [
