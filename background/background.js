@@ -3,6 +3,7 @@ const blockList = new Map();
 const urlFilter = { urls: [] };
 
 function newBlock(block) {
+  console.log(block);
   blockList.set(block.url, block.blockUntil);
   urlFilter.urls.append(block.url);
 }

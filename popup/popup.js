@@ -1,6 +1,4 @@
 /* TODO
-tab is uknown, so is url
-time seems to calculated wrongly
 size of popup needs to be adapted
 popup needs to have better CSS
 icon is horrible - single color, all white or grey, just a white or grey circle with red cake slice
@@ -9,6 +7,13 @@ why does popup need so long to show up?
 
 const hoursSelected = document.getElementById("hour");
 const minutesSelected = document.getElementById("minute");
+
+function send(blockedSite){
+	chrome.runtime.sendMessage(blockedSite, function(response){
+		console.log(response.message);
+	});
+	window.close();
+}
 
 function blockSite(e) {
 	let hours = 0;
@@ -28,33 +33,25 @@ function blockSite(e) {
 		minutes = 0;
 	}
 	// sanitize inputs - make sure that it's numeric only TODO
-	let blockUntil = new Date();
+	let blockUntil = Date.now();
 	if (hours > 0){
-		let hoursNow = blockUntil.getUTCHours();
-		console.log(hours);
-		console.log(blockUntil);
-		console.log(hoursNow);
-		blockUntil.setUTCHours(hoursNow + hours); // TODO get time arithmetics right
+		blockUntil += hours*(60*60*1000); // convert to milliseconds
 	}
 	if (minutes > 0){
-		let minutesNow = blockUntil.getUTCMinutes();
-		blockUntil.setUTCMinutes(minutesNow + minutes);
+		blockUntil += minutes*(60*1000); // convert to milliseconds
 	}
-	console.log(blockUntil);
 
-	chrome.tabs.getCurrent(
-		function(tab){
-			let url = tab.url; // TODO allow url matching patterns
-	})
-	console.log(url);
-	let blockedSite = {'url': url, 'blockUntil':blockUntil};
-	chrome.runtime.sendMessage(blockedSite);
-	window.close();
+	chrome.tabs.query({active: true}, function(tabs){
+			console.log(tabs[0]);
+			let url = tabs[0].url; // TODO allow url matching patterns
+			console.log(url);
+			let blockedSite = {'url': url, 'blockUntil':blockUntil};
+			send(blockedSite);
+	});
 }
 
 // display the currently chosen hours to block
 hoursSelected.addEventListener("input", function(e){
-	console.log("slider changed");
 	let hoursLabel = document.getElementById("hourLabel");
 	hoursLabel.innerHTML = hoursSelected.value + " hours";
 });
