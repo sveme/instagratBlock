@@ -1,7 +1,6 @@
 /* TODO
 size of popup needs to be adapted
 popup needs to have better CSS
-icon is horrible - single color, all white or grey, just a white or grey circle with red cake slice
 why does popup need so long to show up?
 */
 
@@ -16,8 +15,8 @@ function send(blockedSite){
 }
 
 function blockSite(e) {
-	let hours = 0;
-	let minutes = 0;
+	let hours;
+	let minutes;
 	try {
 		hours = hoursSelected.value;
 	}
@@ -29,10 +28,9 @@ function blockSite(e) {
 		minutes = minutesSelected.value;
 	}
 	catch (exception){
-		console.error(exception);
+		console.error(exception); //FIXME remove
 		minutes = 0;
 	}
-	// sanitize inputs - make sure that it's numeric only TODO
 	let blockUntil = Date.now();
 	if (hours > 0){
 		blockUntil += hours*(60*60*1000); // convert to milliseconds
@@ -42,10 +40,9 @@ function blockSite(e) {
 	}
 
 	chrome.tabs.query({active: true}, function(tabs){
-			console.log(tabs[0]);
 			let url = tabs[0].url; // TODO allow url matching patterns
-			console.log(url);
 			let blockedSite = {'url': url, 'blockUntil':blockUntil};
+			console.log(blockedSite);
 			send(blockedSite);
 	});
 }
