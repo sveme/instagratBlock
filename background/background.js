@@ -1,15 +1,33 @@
-// needs to get a message from the popup script about which sites to block
 const blockList = new Map();
 const urlFilter = { urls: [] };
 
+// how to get the index of the matched url to check whether the block timed out?
 function newBlock(block, reply) {
-  console.log(block);
   blockList.set(block.url, block.blockUntil);
-  console.log(blockList);
-  urlFilter.urls.append(block.url);
-  console.log(urlFilter.urls);
+  let pattern = createURLPattern(block.url);
+  urlFilter.urls.push(pattern);
+
   reply({message:'url blocked'});
 }
+
+function createURLPattern(url){
+  // create URL filter pattern that matches http and https and the URL with and without www
+  const s1 = url.split("//");
+  const addr = s1[1];
+  const index = addr.indexOf('www.'); //what about ww3? remove everything 
+  if (index >= 0){
+    const remAddr = addr.splice(index, addr.length);
+  }
+  const pattern = "http*://.*" + remAddr;
+  return pattern
+}
+
+function matchPattern(patternStr, testurl){
+  let pattern = new RegExp(patternStr);
+  // does it require transformations of the pattern?
+  return pattern.test(testurl);
+}
+
 function checkBlock(details) {
   console.log(details);
   let block = false;

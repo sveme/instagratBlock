@@ -40,7 +40,7 @@ function blockSite(e) {
 	}
 
 	chrome.tabs.query({active: true}, function(tabs){
-			let url = tabs[0].url; // TODO allow url matching patterns
+			let url = tabs[0].url;
 			let blockedSite = {'url': url, 'blockUntil':blockUntil};
 			console.log(blockedSite);
 			send(blockedSite);
