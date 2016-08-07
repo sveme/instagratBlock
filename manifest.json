@@ -29,7 +29,7 @@
     "webRequestBlocking"
     ],
 
-  "web_accessible_resources":["resources/blocked.html"],
+  "web_accessible_resources":["resources/blocked.html, resources/blocked.css"],
 
   "background":{
     "scripts": ["background/background.js"]

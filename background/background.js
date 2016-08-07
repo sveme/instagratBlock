@@ -27,7 +27,7 @@ function newBlock(block, reply) {
   */
   const regExpPattern = createURLRegExp(block.url); // for use in finding the time until its blocked
   const filterPattern = createURLPattern(block.url); // for use in urlFilter object
-  blockMap.set(regExpPattern, { until: block.blockUntil, urlPattern: filterPattern }); // TODO
+  blockMap.set(regExpPattern, { until: block.blockUntil, urlPattern: filterPattern });
   urlFilter.urls.push(filterPattern);
   chrome.webRequest.onBeforeRequest.addListener(checkBlock, urlFilter, ['blocking']);
   console.log(blockMap);
@@ -67,7 +67,8 @@ function checkBlock(details) {
   console.log(blockMap);
   if (block) {
     console.log("blocked!");
-    // const redirectSiteUrl = chrome.extension.getURL("resources/blocked.html");
+    const redirectSiteUrl = chrome.extension.getURL("resources/blocked.html");
+    //return { redirectUrl: redirectSiteUrl };
     return { cancel: true };
   }
   else {
