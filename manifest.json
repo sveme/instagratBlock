@@ -29,6 +29,8 @@
     "webRequestBlocking"
     ],
 
+  "web_accessible_resources":["resources/blocked.html"],
+
   "background":{
     "scripts": ["background/background.js"]
   }
