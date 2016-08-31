@@ -4,24 +4,20 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="instagratBlock.css"/>
   </head>
-
   <body>
-    <div id="content">
-      Block this Instant Gratification site for the selected time - if you really need it, however, restart the browser to relieve the block.
-
-      <div id="blockTime">
+    <div class="main">
+      <p>
+        Block this Instant Gratification site for the selected time - if you really need it, however, restart the browser to relieve the block.
+      </p>
+      <div class="timeform">
         <form>
-          <label><span class="igLabel" id="hourLabel">0 hours</span>
-            <input type="range" class="igRange" id="hour" autofocus="True" max=12 value=0> </input>
-          </label>
-          <label><span class="igLabel" id="minuteLabel">0 minutes</span>
-            <input type="range" class="igRange" id="minute" max=50 step=10 value=0> </input>
+          <label><span id="displayMinutes" class="timeform__lbl">0 minutes</span>
+            <input type="range" class="timeform__input" max=180 step=10 value=0> </input>
           </label>
         </form>
       </div>
 
-      <button type="button" id="block" class="igButton"> Block for selected time </button>
-      <button type="button" id="cancel" class="igButton"> Cancel Blocking </button>
+      <button type="button" id="blockbtn" class="timeform__btn timeform__btn--inactive"> Block for selected time </button>
     </div>
 
     <script src="popup.js"></script>

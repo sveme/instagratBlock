@@ -1,9 +1,3 @@
-/* TODO
-size of popup needs to be adapted
-popup needs to have better CSS
-why does popup need so long to show up?
-*/
-
 const hoursSelected = document.getElementById("hour");
 const minutesSelected = document.getElementById("minute");
 
@@ -15,26 +9,15 @@ function send(blockedSite){
 }
 
 function blockSite(e) {
-	let hours;
 	let minutes;
-	try {
-		hours = hoursSelected.value;
-	}
-	catch(exception) {
-		console.error(exception);
-		hours = 0;
-	}
 	try {
 		minutes = minutesSelected.value;
 	}
 	catch (exception){
-		console.error(exception); //FIXME remove
+		console.error(exception);
 		minutes = 0;
 	}
 	let blockUntil = Date.now();
-	if (hours > 0){
-		blockUntil += hours*(60*60*1000); // convert to milliseconds
-	}
 	if (minutes > 0){
 		blockUntil += minutes*(60*1000); // convert to milliseconds
 	}
@@ -47,21 +30,11 @@ function blockSite(e) {
 	});
 }
 
-// display the currently chosen hours to block
-hoursSelected.addEventListener("input", function(e){
-	let hoursLabel = document.getElementById("hourLabel");
-	hoursLabel.innerHTML = hoursSelected.value + " hours";
-});
 //display the currently chosen minutes to block
-minutesSelected.addEventListener("input", function(e){
-	let minutesLabel = document.getElementById("minuteLabel");
+minutesSelected.addEventListener("input", function(e) {
+	let minutesLabel = document.getElementById("displayMinutes");
 	minutesLabel.innerHTML = minutesSelected.value + " minutes";
 });
 // event listeners for the cancel and block buttons
-const blockNow = document.getElementById("block");
-const blockCancel = document.getElementById("cancel");
-blockCancel.addEventListener("click", function(e){
-	window.close();
-	// close the tab
-});
+const blockNow = document.getElementById("blockbtn");
 blockNow.addEventListener("click", blockSite);

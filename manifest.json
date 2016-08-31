@@ -18,6 +18,7 @@
   },
 
   "browser_action": {
+    "browser_style": true,
     "default_icon": "icons/instagratBlock-32_grey.png",
     "default_title": "InstagratBlock",
     "default_popup": "popup/instagratBlock.html"
@@ -29,7 +30,7 @@
     "webRequestBlocking"
     ],
 
-  "web_accessible_resources":["resources/blocked.html, resources/blocked.css"],
+  "web_accessible_resources":["resources/blocked.html", "resources/blocked.css"],
 
   "background":{
     "scripts": ["background/background.js"]

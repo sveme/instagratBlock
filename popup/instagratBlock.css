@@ -1,19 +1,28 @@
 html, body {
+  font-family: helvetica, sans-serif;
   width: 300px;
 }
 
-#content {
+.timeform {
 
 }
 
-.igButton{
+.timeform__input {
 
 }
 
-.igLabel{
+.timeform__lbl {
 
 }
 
-.igRange{
-  
+.timeform__btn {
+
+}
+
+.timeform__btn--inactive {
+
+}
+
+.timeform__btn--active {
+
 }
