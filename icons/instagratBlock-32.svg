@@ -11,12 +11,11 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="32"
    height="32"
-   viewBox="0 0 32 32.000001"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="instagratBlock-32.svg"
-   inkscape:export-filename="/home/sven/dev/instagratBlock/icons/instagratBlock-32.png"
+   inkscape:export-filename="/home/sveme/dev/instagratBlock/icons/instagratBlock-48.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <defs
@@ -28,18 +27,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="22.4"
-     inkscape:cx="19.87022"
-     inkscape:cy="18.537383"
+     inkscape:zoom="3.959798"
+     inkscape:cx="30.008906"
+     inkscape:cy="9.2451317"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     units="px"
      inkscape:window-width="1366"
      inkscape:window-height="744"
      inkscape:window-x="0"
      inkscape:window-y="24"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -48,7 +50,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -56,110 +58,34 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-1020.3622)">
-    <circle
-       style="fill:none;fill-opacity:1;stroke:#3b71f7;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4136"
-       cx="16"
-       cy="1036.3622"
-       r="14.5" />
+     transform="translate(-259.27681,-481.03589)">
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#3b71f7;stroke-width:0.79999995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 22.260548,1025.7234 0.957808,-1.4933"
-       id="path4140-8-3"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#3b71f7;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 16,1022.0024 0,2.3991"
-       id="path4140"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:#f73b3e;fill-opacity:1;stroke:none;stroke-width:0.80000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4227"
        sodipodi:type="arc"
-       sodipodi:cx="15.982142"
-       sodipodi:cy="1036.4247"
-       sodipodi:rx="12.946428"
-       sodipodi:ry="12.946428"
-       sodipodi:start="4.7647489"
-       sodipodi:end="5.5676003"
-       d="m 16.659707,1023.496 a 12.946428,12.946428 0 0 1 9.093229,4.4351 l -9.770794,8.4936 z" />
+       style="fill:#4d4d4d;stroke:none"
+       id="path2987-3"
+       sodipodi:cx="254.89542"
+       sodipodi:cy="486.42422"
+       sodipodi:rx="19.613533"
+       sodipodi:ry="12.121831"
+       d="m 268.76428,477.8528 a 19.613533,12.121831 0 1 1 -27.73773,0 l 13.86887,8.57142 z"
+       transform="matrix(0.79014136,0,0,1.2784754,73.873401,-124.84555)"
+       sodipodi:start="5.4977871"
+       sodipodi:end="10.210176"
+       inkscape:export-filename="/home/sveme/dev/instagratBlock/icons/instagratBlock-32.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#3b71f7;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 16,1048.7706 0,2.3991"
-       id="path4140-7"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#3b71f7;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 30.419588,1036.3622 -2.3991,0"
-       id="path4140-8"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#3b71f7;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 4.378122,1036.3622 -2.3991,0"
-       id="path4140-7-6"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:#000000;fill-rule:evenodd;stroke:#3b71f7;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 15.982143,1036.2015 Z"
-       id="path4175"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#3b71f7;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 42.142857,1024.5051 Z"
-       id="path4177"
-       inkscape:connector-curvature="0" />
-    <ellipse
-       style="fill:none;fill-opacity:1;stroke:#3b71f7;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4179"
-       cx="16"
-       cy="1036.3622"
-       rx="0.22321428"
-       ry="0.26785713" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#3b71f7;stroke-width:0.79999995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 26.750745,1030.3562 1.563878,-0.8375"
-       id="path4140-8-3-6"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#3b71f7;stroke-width:0.79999995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 3.6972932,1029.6403 1.5361424,0.8875"
-       id="path4140-8-3-0"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#3b71f7;stroke-width:0.79999995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 8.8116287,1024.4635 0.9871,1.4741"
-       id="path4140-8-3-6-3"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#3b71f7;stroke-width:0.79999995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 9.8048816,1047.1111 -0.957808,1.4933"
-       id="path4140-8-3-64"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#3b71f7;stroke-width:0.79999995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 5.1370518,1042.5365 -1.563878,0.8375"
-       id="path4140-8-3-6-8"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#3b71f7;stroke-width:0.79999995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 28.271163,1043.2247 -1.536142,-0.8875"
-       id="path4140-8-3-0-6"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#3b71f7;stroke-width:0.79999995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 23.140577,1048.4718 -0.9871,-1.4741"
-       id="path4140-8-3-6-3-5"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:#3b71f7;fill-opacity:1;fill-rule:evenodd;stroke:#3b71f7;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 16.824364,1036.3208 10.994127,0.026"
-       id="path4210"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:#3b71f7;fill-opacity:1;fill-rule:evenodd;stroke:#3b71f7;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 15.999258,1026.6538 -0.02594,8.897"
-       id="path4210-7"
-       inkscape:connector-curvature="0" />
+       sodipodi:type="arc"
+       style="fill:none;stroke:#333333;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path2987"
+       sodipodi:cx="254.89542"
+       sodipodi:cy="486.42422"
+       sodipodi:rx="19.613533"
+       sodipodi:ry="12.121831"
+       d="m 274.50895,486.42422 a 19.613533,12.121831 0 1 1 -39.22707,0 19.613533,12.121831 0 1 1 39.22707,0 z"
+       transform="matrix(0.79014129,0,0,1.2784754,73.873404,-124.84555)"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="/home/sveme/dev/instagratBlock/icons/instagratBlock-32.png" />
   </g>
 </svg>

@@ -2,25 +2,35 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="instagratBlock.css"/>
+    <link rel="stylesheet" type="text/css" href="instagratBlock.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/font-awesome-4.6.3/css/font-awesome.min.css">
   </head>
+  <header>
+    <div class="header">
+    instagratBlock
+  </div>
+  </header>
   <body>
     <div class="main">
-      <p>
+      <!-- <p>
         Block this Instant Gratification site for the selected time - if you really need it, however, restart the browser to relieve the block.
-      </p>
-      <div class="timeform">
+      </p> -->
+      <div class="form">
         <form>
-          <label><span id="displayMinutes" class="timeform__lbl">0 minutes</span>
-            <input type="range" class="timeform__input" max=180 step=10 value=0> </input>
-          </label>
+          <div class="timepicker__input">
+            <input type="number" id="hours" min="0" max="24" class="timepicker" placeholder="hours" inputmode="numeric"></input>
+            :
+            <input type="number" id="minutes" min="0" max="59" class="timepicker" placeholder="minutes" inputmode="numeric"></input>
+          </div>
         </form>
       </div>
-
-      <button type="button" id="blockbtn" class="timeform__btn timeform__btn--inactive"> Block for selected time </button>
+      <div class="timeform__btn" id="blockbtn">
+        <i class="fa fa-ban fa-lg" aria-hidden="true"></i>
+        &nbsp;Block
+      </div>
     </div>
-
-    <script src="popup.js"></script>
+    <script type="text/javascript" src="lib/mtr-datepicker/dist/mtr-datepicker.min.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
   </body>
 
 </html>

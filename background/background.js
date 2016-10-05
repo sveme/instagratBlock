@@ -5,8 +5,8 @@ const urlFilter = { urls: [] };
 /* helper functions */
 function createURLPattern(url) {
   /* create URL filter pattern that matches http and https */
-  const pattern = url.replace(/http[s]?:\/\//, '*://');
-  return pattern;
+  let pattern = url.replace(/http[s]?:\/\//, '*://');
+  return pattern + "*";
 }
 
 function createURLRegExp(url) {
