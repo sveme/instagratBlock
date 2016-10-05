@@ -45,23 +45,17 @@ input[type="number"] {
 
 .timepicker {
   border: 1px solid;
-  border-color: rgb(210,210,210);
+  border-color: #D1D1D1;
+  border-radius: 2px;
   font-family: inherit;
+  font-size:16px;
   width: 90px;
   margin:0;
   padding: 0;
 }
 
-.timepicker__minute {
-  border: 1px solid;
-  border-color: rgb(210,210,210);
-  font-family: inherit;
-  width: 90px;
-  margin:0;
-  padding:0;
-}
 .timepicker:focus {
-  border-color: rgba(54, 230, 208, 0.97);
+  border-color: rgb(54, 230, 208);
 }
 
 .timeform__btn {
