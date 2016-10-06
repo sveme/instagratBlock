@@ -61,6 +61,7 @@ function checkBlock(details) {
     const pos = urlFilter.urls.indexOf(matchedUrlPattern.urlPattern);
     blockMap.delete(matchedRegExpPattern); // remove block when block time is superseded
     urlFilter.urls.splice(pos, 1);
+    // update event listeners with new urlFilter objects
     chrome.webRequest.onBeforeRequest.removeListener(checkBlock);
     chrome.webRequest.onBeforeRequest.addListener(checkBlock, urlFilter, ['blocking']);
   }
@@ -68,8 +69,9 @@ function checkBlock(details) {
   if (block) {
     console.log("blocked!");
     const redirectSiteUrl = chrome.extension.getURL("resources/blocked.html");
-    //return { redirectUrl: redirectSiteUrl };
-    return { cancel: true };
+    console.log(redirectSiteUrl);
+    return { redirectUrl: redirectSiteUrl };
+    //return { cancel: true };
   }
   else {
     console.log("Not blocked!");
