@@ -1,25 +1,23 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="instagratBlock.css"/>
     <link rel="stylesheet" type="text/css" href="lib/font-awesome-4.6.3/css/font-awesome.min.css">
   </head>
-  <header>
-    <div class="header">
-    instagratBlock
-  </div>
+  <header class="header">
+    <span class="header__left"><a href='#'><i class="fa fa-info" aria-hidden="true"></i></a></span> <span class="header__right">instagratBlock</span>
   </header>
   <body>
     <div class="main">
       <div class="form">
         <form>
-          <input type="url" id="urlEditor" class="urlEdit"/>
-          <div class="timepicker__input">
-            <input type="number" id="hours" min="0" max="24" class="timepicker" placeholder="hours" inputmode="numeric"></input>
+            <input type="number" id="hours" min="0" max="24" class="timepicker" placeholder="hours" inputmode="numeric">
             :
-            <input type="number" id="minutes" min="0" max="59" class="timepicker" placeholder="minutes" inputmode="numeric"></input>
-          </div>
+            <input type="number" id="minutes" min="0" max="59" class="timepicker" placeholder="minutes" inputmode="numeric">
+            <label class="radio"><input type="checkbox" id="blockDomainRadioBtn" value="blockDomain" name="blockDomainOrSiteToggle" checked/>
+              Block whole domain
+            </label>
         </form>
       </div>
       <div class="btn" id="blockbtn">

@@ -18,7 +18,7 @@
   },
 
   "browser_action": {
-    "browser_style": true,
+    "browser_style": false,
     "default_icon": "icons/instagratBlock-32.png",
     "default_title": "InstagratBlock",
     "default_popup": "popup/instagratBlock.html"
