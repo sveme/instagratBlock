@@ -6,15 +6,18 @@
     <link rel="stylesheet" type="text/css" href="lib/font-awesome-4.6.3/css/font-awesome.min.css">
   </head>
   <header class="header">
-    <span class="header__left"><a href='#'><i class="fa fa-info" aria-hidden="true"></i></a></span> <span class="header__right">instagratBlock</span>
+    <span class="header__left"><a href='#'><i class="fa fa-info-circle" aria-hidden="true"></i></a></span>
+    <a href='https://www.github.com/sveme/instagratBlock' target="_blank" class="header__right">instagratBlock</a>
   </header>
   <body>
     <div class="main">
+      <div class="popup">
+        <p>Some content in here</p>
+      </div>
       <div class="form">
         <form>
-            <input type="number" id="hours" min="0" max="24" class="timepicker" placeholder="hours" inputmode="numeric">
-            :
-            <input type="number" id="minutes" min="0" max="59" class="timepicker" placeholder="minutes" inputmode="numeric">
+            <input type="number" id="hours" min="0" max="24" class="timepicker timepicker__left" placeholder="hours" inputmode="numeric">
+            <input type="number" id="minutes" min="0" max="59" class="timepicker timepicker__right" placeholder="minutes" inputmode="numeric">
             <label class="radio"><input type="checkbox" id="blockDomainRadioBtn" value="blockDomain" name="blockDomainOrSiteToggle" checked/>
               Block whole domain
             </label>

@@ -6,6 +6,7 @@
 
 html, body {
   font-family: proxima-nova;
+  font-size: 16px;
   width: 250px;
   height: auto;
   background: #fcfcfc; }
@@ -15,30 +16,49 @@ input[type="number"] {
   -moz-appearance: textfield; }
 
 .header {
+  font-size: inherit;
   background: #1f8b8f;
   color: white;
   width: 100%;
   height: 2em;
   line-height: 2em;
-  text-align: center;
-  font-weight: 600;
   margin: 1px; }
 
 .header__left {
   display: block;
   float: left;
-  margin-left: 5px;
+  padding-left: 5px;
   color: white; }
+
+.header__left a {
+  color: white;
+  text-decoration: none; }
 
 .header__right {
   display: block;
   float: right;
-  margin-right: 5px; }
+  padding-right: 5px;
+  color: white;
+  text-decoration: none; }
+
+.header__right a {
+  color: white;
+  text-decoration: none; }
 
 .main {
   font-family: inherit;
   margin: 1px;
-  padding: 2px; }
+  padding: 2px;
+  position: relative; }
+
+.popup {
+  display: none;
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  left: -150px;
+  top: 30px;
+  box-shadow: 5px 5px gray; }
 
 .form {
   width: 200px;
@@ -52,7 +72,7 @@ input[type="number"] {
   display: block;
   font-family: inherit;
   font-size: 16px;
-  color: grey;
+  color: gray;
   width: 190px;
   margin-top: 5px;
   margin-bottom: 20px;
@@ -68,24 +88,34 @@ input[type="number"] {
   margin: 0;
   padding: 0; }
 
+.timepicker__left {
+  display: block;
+  float: left; }
+
+.timepicker__center {
+  text-align: center; }
+
+.timepicker__right {
+  display: block;
+  float: right; }
+
 .timepicker:focus,
 .urlEdit:focus {
   border-color: #36e6d0; }
 
 .btn {
   font-family: inherit;
-  width: 190px;
+  width: 200px;
   height: auto;
   color: #434546;
   position: relative;
   left: 25px;
+  right: 25px;
   text-align: center;
   font-size: 16px;
   border: 1px solid;
   border-radius: 2px;
   border-color: #D1D1D1;
-  padding-left: 10px;
-  padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   text-decoration: none; }
@@ -94,3 +124,7 @@ input[type="number"] {
   background: rgba(54, 230, 208, 0.97);
   color: white;
   cursor: pointer; }
+
+.btn--inactive {
+  cursor: default; }
+

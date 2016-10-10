@@ -68,10 +68,8 @@ function checkBlock(details) {
   console.log(blockMap);
   if (block) {
     console.log("blocked!");
-    const redirectSiteUrl = chrome.extension.getURL("resources/blocked.html");
-    console.log(redirectSiteUrl);
-    return { redirectUrl: redirectSiteUrl };
-    //return { cancel: true };
+    //return { redirectUrl: redirectSiteUrl };
+    return { cancel: true };
   }
   else {
     console.log("Not blocked!");

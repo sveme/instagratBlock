@@ -1,6 +1,31 @@
-const minutesInput = document.getElementById("minutes");
-const hoursInput = document.getElementById("hours");
+let minutesInput = document.getElementById("minutes");
+let hoursInput = document.getElementById("hours");
+let blockNow = document.getElementById("blockbtn");
 
+function validateInput(e) {
+	let val = e.target.value;
+	console.log(val);
+	if (!Number.isSaveInteger(val)) {
+		setFalseInput(e.target);
+	}
+	else {
+		setCorrectInput(e.target);
+	}
+}
+
+function setFalseInput(target) {
+	blockNow.removeListener(blockSite);
+	target.classList.add("btn--inactive");
+	target.classList.remove("btn:hover");
+}
+
+function setCorrectInput(target) {
+	blockNow.addEventListener("click", blockSite);
+	target.classList.remove("btn--inactive");
+	target.classList.add("btn");
+}
+
+// communication with background script
 function send(blockedSite){
 	chrome.runtime.sendMessage(blockedSite, function(response){
 		console.log(response.message);
@@ -27,6 +52,7 @@ function blockSite(e) {
 		});
 }
 
-// event listeners for the cancel and block buttons
-const blockNow = document.getElementById("blockbtn");
+// event listeners for the block button and to check that the inputs are correct
 blockNow.addEventListener("click", blockSite);
+minutesInput.addEventListener("input", validateInput);
+hoursInput.addEventListener("input", validateInput);
