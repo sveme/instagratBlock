@@ -2,36 +2,6 @@ let minutesInput = document.getElementById("minutes");
 let hoursInput = document.getElementById("hours");
 let blockbtn = document.getElementById("blockbtn");
 
-function validateInput(e) {
-	let val = e.target.value;
-	console.log(val);
-	if (!Number.isInteger(val)) {
-		setInvalidInput(e.target);
-	}
-	else if (val === null) {
-		setValidInput(e.target);
-	}
-	else {
-		setValidInput(e.target);
-	}
-}
-
-function setInvalidInput(target) {
-	//blockbtn.removeListener(blockSite);
-	//blockbtn.classList.remove("btn--valid");
-	//blockbtn.classList.add("btn--invalid");
-	target.classList.remove("timepicker--valid");
-	target.classList.add("timepicker--invalid");
-}
-
-function setValidInput(target) {
-	//blockbtn.addEventListener("click", blockSite);
-	//blockbtn.classList.remove("btn--invalid");
-	//blockbtn.classList.add("btn--valid");
-	target.classList.remove("timepicker--invalid");
-	target.classList.add("timepicker--valid");
-}
-
 // communication with background script
 function send(blockedSite){
 	chrome.runtime.sendMessage(blockedSite, function(response){
@@ -41,6 +11,9 @@ function send(blockedSite){
 }
 
 function blockSite(e) {
+	if (!minutesInput.checkValidity() || !hoursInput.checkValidity()) {
+		return
+	}
 	let minutes = minutesInput.value ? minutesInput.value : 0;
 	let hours = hoursInput.value ? hoursInput.value : 0;
 	if (minutes === 0 & hours === 0) {
@@ -59,7 +32,5 @@ function blockSite(e) {
 		});
 }
 
-// event listeners for the block button and to check that the inputs are correct
+// event listeners for the block button
 blockbtn.addEventListener("click", blockSite);
-minutesInput.addEventListener("keyup", validateInput);
-hoursInput.addEventListener("keyup", validateInput);
