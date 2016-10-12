@@ -1,28 +1,35 @@
 let minutesInput = document.getElementById("minutes");
 let hoursInput = document.getElementById("hours");
-let blockNow = document.getElementById("blockbtn");
+let blockbtn = document.getElementById("blockbtn");
 
 function validateInput(e) {
 	let val = e.target.value;
 	console.log(val);
-	if (!Number.isSaveInteger(val)) {
-		setFalseInput(e.target);
+	if (!Number.isInteger(val)) {
+		setInvalidInput(e.target);
+	}
+	else if (val === null) {
+		setValidInput(e.target);
 	}
 	else {
-		setCorrectInput(e.target);
+		setValidInput(e.target);
 	}
 }
 
-function setFalseInput(target) {
-	blockNow.removeListener(blockSite);
-	target.classList.add("btn--inactive");
-	target.classList.remove("btn:hover");
+function setInvalidInput(target) {
+	//blockbtn.removeListener(blockSite);
+	//blockbtn.classList.remove("btn--valid");
+	//blockbtn.classList.add("btn--invalid");
+	target.classList.remove("timepicker--valid");
+	target.classList.add("timepicker--invalid");
 }
 
-function setCorrectInput(target) {
-	blockNow.addEventListener("click", blockSite);
-	target.classList.remove("btn--inactive");
-	target.classList.add("btn");
+function setValidInput(target) {
+	//blockbtn.addEventListener("click", blockSite);
+	//blockbtn.classList.remove("btn--invalid");
+	//blockbtn.classList.add("btn--valid");
+	target.classList.remove("timepicker--invalid");
+	target.classList.add("timepicker--valid");
 }
 
 // communication with background script
@@ -53,6 +60,6 @@ function blockSite(e) {
 }
 
 // event listeners for the block button and to check that the inputs are correct
-blockNow.addEventListener("click", blockSite);
-minutesInput.addEventListener("input", validateInput);
-hoursInput.addEventListener("input", validateInput);
+blockbtn.addEventListener("click", blockSite);
+minutesInput.addEventListener("keyup", validateInput);
+hoursInput.addEventListener("keyup", validateInput);

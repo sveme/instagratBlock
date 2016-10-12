@@ -16,14 +16,14 @@
       </div>
       <div class="form">
         <form>
-            <input type="number" id="hours" min="0" max="24" class="timepicker timepicker__left" placeholder="hours" inputmode="numeric">
-            <input type="number" id="minutes" min="0" max="59" class="timepicker timepicker__right" placeholder="minutes" inputmode="numeric">
+            <input type="number" id="hours" min="0" max="24" class="timepicker timepicker__left timepicker--valid" placeholder="hours" inputmode="numeric">
+            <input type="number" id="minutes" min="0" max="59" class="timepicker timepicker__right timepicker--valid" placeholder="minutes" inputmode="numeric">
             <label class="radio"><input type="checkbox" id="blockDomainRadioBtn" value="blockDomain" name="blockDomainOrSiteToggle" checked/>
               Block whole domain
             </label>
         </form>
       </div>
-      <div class="btn" id="blockbtn">
+      <div class="btn btn--valid" id="blockbtn">
         <i class="fa fa-ban fa-lg" aria-hidden="true"></i>
         &nbsp;Block
       </div>

@@ -99,9 +99,12 @@ input[type="number"] {
   display: block;
   float: right; }
 
-.timepicker:focus,
-.urlEdit:focus {
+.timepicker--valid:focus {
   border-color: #36e6d0; }
+
+.timepicker--invalid,
+.timepicker--invalid:focus {
+  border-color: #e43608; }
 
 .btn {
   font-family: inherit;
@@ -120,11 +123,13 @@ input[type="number"] {
   padding-bottom: 5px;
   text-decoration: none; }
 
-.btn:hover {
+.btn--valid:hover {
   background: rgba(54, 230, 208, 0.97);
   color: white;
   cursor: pointer; }
 
-.btn--inactive {
-  cursor: default; }
+.btn--invalid:hover {
+  background: white;
+  cursor: default;
+  color: #434546; }
 
