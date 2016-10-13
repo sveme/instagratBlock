@@ -2,6 +2,13 @@ let minutesInput = document.getElementById("minutes");
 let hoursInput = document.getElementById("hours");
 let blockbtn = document.getElementById("blockbtn");
 
+function keyPressed(e) {
+	const keyName = e.key;
+	if (keyName === "Enter") {
+		blockSite(e);
+	}
+}
+
 // communication with background script
 function send(blockedSite){
 	chrome.runtime.sendMessage(blockedSite, function(response){
@@ -34,3 +41,5 @@ function blockSite(e) {
 
 // event listeners for the block button
 blockbtn.addEventListener("click", blockSite);
+hoursInput.addEventListener("keyup", keyPressed);
+minutesInput.addEventListener("keyup", keyPressed);
