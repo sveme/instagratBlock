@@ -1,12 +1,19 @@
-let minutesInput = document.getElementById("minutes");
-let hoursInput = document.getElementById("hours");
-let blockbtn = document.getElementById("blockbtn");
+const minutesInput = document.getElementById("minutes");
+const hoursInput = document.getElementById("hours");
+const blockbtn = document.getElementById("blockbtn");
+const blockDomainCheckbox = document.getElementById("blockDomainCheckbox");
 
 function keyPressed(e) {
 	const keyName = e.key;
 	if (keyName === "Enter") {
 		blockSite(e);
 	}
+}
+
+function getDomain(url) {
+	const parts = url.split('/');
+	const domain = parts[2];
+	return parts[0] + '//' + domain + '/';
 }
 
 // communication with background script
@@ -23,7 +30,7 @@ function blockSite(e) {
 	}
 	let minutes = minutesInput.value ? minutesInput.value : 0;
 	let hours = hoursInput.value ? hoursInput.value : 0;
-	if (minutes === 0 & hours === 0) {
+	if (minutes === 0 && hours === 0) {
 		return;
 	}
 	let blockUntil = Date.now();
@@ -31,8 +38,11 @@ function blockSite(e) {
 
 	chrome.tabs.query({active: true}, function(tabs){
 		let url = tabs[0].url;
+		// use the full domain if the corresponding checkbox is active
+		if (blockDomainCheckbox.checked) {
+			url = getDomain(url);
+		}
 		console.log(url);
-
 		let blockedSite = {'url': url, 'blockUntil':blockUntil};
 		console.log(blockedSite);
 		send(blockedSite);
