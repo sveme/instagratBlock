@@ -1,7 +1,6 @@
 /* eslint no-undef: "error" */
 const blockMap = new Map();
 const urlFilter = { urls: [] };
-const blockIndicator = 'document.body.style.border = "5px red"';
 
 /* helper functions */
 function createURLPattern(url) {
@@ -70,7 +69,8 @@ function checkBlock(details) {
   if (block) {
     console.log("blocked!");
     //return { redirectUrl: redirectSiteUrl };
-    chrome.tabs.executeScript({code: blockIndicator});
+    chrome.tabs.insertCSS(null, {file: '/css/blockIndicator.css', matchAboutBlank: true});
+    chrome.tabs.executeScript({file: '/background/blockIndicator.js'});
     return { cancel: true };
   }
   else {

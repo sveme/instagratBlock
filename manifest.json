@@ -27,12 +27,13 @@
   "permissions": [
     "activeTab",
     "webRequest",
-    "webRequestBlocking"
+    "webRequestBlocking",
+    "http://*/",
+    "https://*/"
     ],
 
-  "web_accessible_resources":["resources/blocked.html", "resources/blocked.css"],
 
-  "background":{
+  "background": {
     "scripts": ["background/background.js"]
   }
 }
