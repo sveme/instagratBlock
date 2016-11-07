@@ -70,6 +70,7 @@ function checkBlock(details) {
     console.log("blocked!");
     //return { redirectUrl: redirectSiteUrl };
     chrome.tabs.insertCSS(null, {file: '/css/blockIndicator.css', matchAboutBlank: true});
+    chrome.tabs.insertCSS(null, {file: '/lib/font-awesome-4.7.0/css/font-awesome.min.css', matchAboutBlank:true});
     chrome.tabs.executeScript({file: '/background/blockIndicator.js'});
     return { cancel: true };
   }
