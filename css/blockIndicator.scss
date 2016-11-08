@@ -1,14 +1,7 @@
-$width: 300px;
-$height: 300px;
-
 .blockIndicator {
   background-color: transparent;
-  text-align: center;
-  font-size: 32px;
-  font-family: inherit;
+  opacity: 0.0;
   z-index: 999;
-  width: $width;
-  height: $height;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -17,5 +10,19 @@ $height: 300px;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 
-  animation: 3s ease-in-out;
+  animation-duration: 2s;
+  animation-name: animateBlocker;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animateBlocker {
+    from {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 1.0;
+    }
+    to {
+      opacity: 0.0;
+    }
 }

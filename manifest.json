@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "InstagratBlock",
-  "version": "0.0",
+  "version": "0.6",
 
   "description": "Blocks you from revisiting any time-stealing instant gratification website for some time",
 
@@ -33,7 +33,7 @@
     ],
 
   "web_accessible_resources": [
-    "icons/instagratBlock-32.png"
+    "icons/blockSymbol.png"
   ],
   "background": {
     "scripts": ["background/background.js"]
