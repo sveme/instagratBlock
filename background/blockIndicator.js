@@ -1,11 +1,12 @@
-if (!blockdiv) {
-  let blockdiv = document.createElement('div');
+if (typeof(blockdiv) === 'undefined') {
+  var blockdiv = document.createElement('div');
 }
 blockdiv.className = 'blockIndicator';
 
-let img = document.createElement('img');
+if (typeof(img) === 'undefined') {
+  var img = document.createElement('img');
+}
 img.setAttribute("src", chrome.extension.getURL("/icons/blockSymbol.png"));
-//img.setAttribute("style", "width: 32px height: 32px");
 img.setAttribute("alt", "Blocked!");
 
 blockdiv.appendChild(img);
@@ -16,4 +17,4 @@ function removeBlockdiv() {
   el.remove();
 }
 
-window.setTimeout(removeBlockdiv, 2500);
+window.setTimeout(removeBlockdiv, 2100);

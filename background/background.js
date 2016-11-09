@@ -44,7 +44,7 @@ function checkBlock(details) {
   blockMap.forEach((val, key) => {
     const rkey = new RegExp(key); // apparently some bug in firefox? key is a string, not a regExp!
     if (rkey.test(details.url)) {
-      matchedRegExpPattern = rkey;
+      matchedRegExpPattern = key;
       matchedUrlPattern = val;
     }
   }, blockMap);
@@ -68,9 +68,7 @@ function checkBlock(details) {
   console.log(blockMap);
   if (block) {
     console.log("blocked!");
-    //return { redirectUrl: redirectSiteUrl };
     chrome.tabs.insertCSS(null, {file: '/css/blockIndicator.css', matchAboutBlank: true});
-    chrome.tabs.insertCSS(null, {file: '/lib/font-awesome-4.7.0/css/font-awesome.min.css', matchAboutBlank:true});
     chrome.tabs.executeScript({file: '/background/blockIndicator.js'});
     return { cancel: true };
   }

@@ -3,7 +3,7 @@ A simple webextension that allows you to block those instant gratification websi
 
 *([LeechBlock](http://www.proginosko.com/leechblock/) is similar, but much more configurable)*
 
-This is still not ready for publication on the Mozilla Add-on repository, however, if you're in such desperate need to remove those reddit/facebook/hackernews procrastination helpers, you can always install this extension temporarily:                              
+To install the code temporarily,
 
 1. Clone the repository into a folder of your liking
 2. In Firefox (≥ 48.0), go to `about:debugging`

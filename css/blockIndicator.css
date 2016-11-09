@@ -15,8 +15,8 @@
 
 @keyframes animateBlocker {
   from {
-    opacity: 0.3; }
-  50% {
+    opacity: 0.0; }
+  20% {
     opacity: 1.0; }
   to {
     opacity: 0.0; } }
